@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wayu-tts"
+version = "0.1.0"
+description = "Inference for Wayu-Paxa-TTS-Edge: fixed-voice Thai text-to-speech, with a tltk + misaki frontend"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+authors = [{ name = "Kunat Pipatanakul", email = "research@wayuresearch.org" }]
+keywords = ["thai", "tts", "text-to-speech", "speech-synthesis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: Thai",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+
+dependencies = [
+    "kokoro>=0.7.16",   # brings torch, transformers, misaki[en], huggingface-hub
+    "tltk>=1.10",       # Thai grapheme-to-phoneme
+    "pythainlp>=5.1",   # number/ๆ expansion and word segmentation
+    "numpy",
+    "soundfile",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.urls]
+Homepage = "https://github.com/wayu-research/wayu-tts-inference"
+Issues = "https://github.com/wayu-research/wayu-tts-inference/issues"
+
+[project.scripts]
+wayu-tts = "wayu_tts.cli:main"
+
+[tool.setuptools]
+packages = ["wayu_tts"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

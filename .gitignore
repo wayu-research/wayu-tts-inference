@@ -1,0 +1,56 @@
+# The model card is maintained internally and published as the Hugging Face
+# model repo's README, not from here.
+MODEL_CARD.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Credentials — never commit
+.env
+.env.*
+*.pem
+*.key
+*.p12
+secrets.*
+.hf_token
+.huggingface/
+.netrc
+
+# Synthesized audio and eval runs
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.opus
+*.m4a
+audio/
+runs/
+
+# Checkpoint artifacts. The model is served from Hugging Face and is never
+# vendored here: weights, style-vector voice packs and the config that ships
+# with them all stay out of this repo.
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+config.json
+voices/
+models/
+checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
