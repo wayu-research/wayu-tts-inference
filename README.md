@@ -149,10 +149,13 @@ individuals.
 ## Citation
 
 ```bibtex
-@article{pipatanakul2026wayupaxa,
-  title  = {Building and Evaluating Fixed-Voice Thai TTS from Synthetic Speech},
-  author = {Pipatanakul, Kunat and Manakul, Potsawee and Sirichotedumrong, Warit and
-            Sripaisarnmongkol, Sittipong and Nathong, Pakorn and Jirabovonvisut, Phatrasek},
-  year   = {2026}
+@misc{pipatanakul2026buildingevaluatingfixedvoicethai,
+      title={Building and Evaluating Fixed-Voice Thai TTS from Synthetic Speech}, 
+      author={Kunat Pipatanakul and Potsawee Manakul and Warit Sirichotedumrong and Sittipong Sripaisarnmongkol and Pakorn Nathong and Phatrasek Jirabovonvisut},
+      year={2026},
+      eprint={2609.03502},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2609.03502}, 
 }
 ```
